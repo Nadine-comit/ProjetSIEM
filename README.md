@@ -19,36 +19,75 @@ Système SIEM simplifié en Python pour centraliser les logs d'un réseau et dé
 
 ## 🚀 Installation
 
-### Serveur
+### Windows
 
-1. Naviguer vers le dossier serveur :
+**Option 1 : Scripts batch (double-clic)**
+- `start_server.bat` → Démarre le serveur
+- `start_client.bat` → Démarre le client
+
+**Option 2 : Ligne de commande**
+
+Serveur :
 ```bash
 cd serveur
-```
-
-2. Créer un environnement virtuel (optionnel mais recommandé) :
-```bash
-python -m venv venv
-source venv/bin/activate  # Sur Linux/Mac
-# ou
-venv\Scripts\activate  # Sur Windows
-```
-
-3. Installer les dépendances :
-```bash
 pip install -r requirements.txt
+python app.py
 ```
 
-### Client
-
-1. Naviguer vers le dossier client :
+Client :
 ```bash
 cd client
+pip install -r requirements.txt
+python client_advanced.py
 ```
 
-2. Installer les dépendances :
+### Linux/Ubuntu
+
+**Option 1 : Scripts shell (recommandé)**
 ```bash
+chmod +x start_server.sh start_client.sh
+./start_server.sh  # Terminal 1
+./start_client.sh   # Terminal 2
+```
+
+**Option 2 : Installation manuelle**
+
+Serveur :
+```bash
+cd serveur
+pip3 install -r requirements.txt
+python3 app.py
+```
+
+Client :
+```bash
+cd client
+pip3 install -r requirements.txt
+python3 client_advanced.py
+```
+
+Voir `INSTALL_UBUNTU.md` pour plus de détails sur Ubuntu.
+
+### Installation avec environnement virtuel (recommandé)
+
+**Serveur:**
+```bash
+cd serveur
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+python app.py
+```
+
+**Client:**
+```bash
+cd client
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# ou venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+python client_advanced.py
 ```
 
 ## 🏃 Utilisation
@@ -177,7 +216,16 @@ ProjetSIEM/
 │   ├── env_log.py          # Client simple
 │   ├── client_advanced.py  # Client avancé pour tests
 │   └── requirements.txt    # Dépendances client
-└── README.md
+├── start_server.sh         # Script de démarrage serveur (Linux/Ubuntu)
+├── start_client.sh         # Script de démarrage client (Linux/Ubuntu)
+├── start_server.bat        # Script de démarrage serveur (Windows)
+├── start_client.bat        # Script de démarrage client (Windows)
+├── test_system.py          # Script de test du système
+├── .gitignore              # Fichiers à ignorer par Git
+├── README.md               # Documentation principale
+├── QUICKSTART.md           # Guide de démarrage rapide
+├── DEMARRAGE_LOCAL.md      # Guide de démarrage local
+└── INSTALL_UBUNTU.md       # Guide d'installation Ubuntu
 ```
 
 ## 🔒 Sécurité

@@ -1,0 +1,61 @@
+# Environnements virtuels Python
+venv/
+env/
+ENV/
+.venv/
+serveur/venv/
+client/venv/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Base de données SQLite
+*.db
+*.sqlite
+*.sqlite3
+serveur/siem_logs.db
+serveur/*.db
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
+
+# Fichiers de test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Fichiers de distribution
+dist/
+build/
+*.egg-info/
+
+# Variables d'environnement
+.env
+.env.local
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
